@@ -1,0 +1,16 @@
+---
+import { event } from "../config/event";
+---
+
+<footer class="mt-16 border-t">
+  <div class="mx-auto max-w-6xl px-6 py-10 text-sm text-slate-600">
+    <p class="font-medium text-slate-900">{event.name}</p>
+    <p class="mt-2">{event.date} · {event.location}</p>
+    <p class="mt-4">
+      Contact:
+      <a class="underline hover:text-slate-900" href={"mailto:" + event.contactEmail}>
+        {event.contactEmail}
+      </a>
+    </p>
+  </div>
+</footer>

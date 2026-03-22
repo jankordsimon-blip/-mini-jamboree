@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { event } from "../config/event";
+---
+
+<BaseLayout title="Contact">
+  <section class="mx-auto max-w-4xl px-6 py-16">
+    <h1 class="text-4xl font-bold tracking-tight">Contact</h1>
+    <p class="mt-4 text-slate-600">
+      Email us at
+      <a class="underline" href={"mailto:" + event.contactEmail}>{event.contactEmail}</a>.
+    </p>
+
+    <div class="mt-10 rounded-xl border p-6">
+      <h2 class="text-xl font-semibold">Newsletter</h2>
+      <p class="mt-2 text-slate-600">
+        Add an embedded signup form here (Brevo/Mailchimp).
+      </p>
+    </div>
+  </section>
+</BaseLayout>

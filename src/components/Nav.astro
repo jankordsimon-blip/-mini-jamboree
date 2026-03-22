@@ -1,0 +1,33 @@
+---
+import { event } from "../config/event";
+
+const links = [
+  { href: "/program", label: "Program" },
+  { href: "/venue", label: "Venue" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/contact", label: "Contact" },
+];
+---
+
+<header class="border-b bg-white">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <a href="/" class="font-semibold tracking-tight">
+      {event.name}
+    </a>
+
+    <div class="flex items-center gap-4 text-sm">
+      {links.map((l) => (
+        <a class="text-slate-700 hover:text-slate-900 hover:underline" href={l.href}>
+          {l.label}
+        </a>
+      ))}
+
+      <a
+        class="ml-2 rounded-lg bg-black px-4 py-2 text-white hover:bg-slate-800"
+        href="/register"
+      >
+        Register
+      </a>
+    </div>
+  </nav>
+</header>

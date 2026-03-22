@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import InterestForm from "../components/InterestForm";
+
+import teamsRaw from "../data/teams-europe.txt?raw";
+
+const ENDPOINT_URL =
+  "https://script.google.com/macros/s/AKfycbxiiap2ckA6EGiL1e8cdo3n_qwtMRGTjDUB5eRIny38iGaaZA69MQwGtfgxA9nTran55Q/exec";
+
+const teams = teamsRaw
+  .split("\n")
+  .map((l) => l.trim())
+  .filter(Boolean);
+---
+
+<BaseLayout title="Register interest">
+  <section class="mx-auto max-w-5xl px-6 py-16">
+    <h1 class="text-4xl font-bold tracking-tight">Expression of Interest</h1>
+    <p class="mt-4 max-w-2xl text-slate-600">
+      Leave your details here. We’ll notify you when Indico registration opens.
+    </p>
+
+    <div class="mt-10">
+      <InterestForm endpointUrl={ENDPOINT_URL} teams={teams} client:load />
+    </div>
+  </section>
+</BaseLayout>
