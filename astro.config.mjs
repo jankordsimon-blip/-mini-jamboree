@@ -7,7 +7,7 @@ const isProd = process.env.NODE_ENV === 'production';
 
 export default defineConfig({
   site: 'https://jankordsimon-blip.github.io',
-  base: isProd ? '/-mini-jamboree' : '/',
+  base: isProd ? '/mini-jamboree' : '/',
 
   vite: {
     plugins: [tailwindcss()]
