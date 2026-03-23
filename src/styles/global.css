@@ -1,1 +1,62 @@
 @import "tailwindcss";
+
+:root {
+  --font-sans: "Inter", "InterVariable",
+    "Noto Sans Arabic", "Noto Sans Devanagari", "Noto Sans SC", "Noto Sans HK", "Noto Sans TC", "Noto Sans JP", "Noto Sans KR",
+    system-ui, sans-serif;
+}
+
+html {
+  font-family: var(--font-sans);
+}
+
+/* iGEM-like heading feel */
+h1 { font-weight: 800; letter-spacing: -0.02em; }
+h2 { font-weight: 700; letter-spacing: -0.01em; }
+h3 { font-weight: 700; }
+
+/* Stronger green accent wash (light) */
+body {
+  background:
+    radial-gradient(1100px 650px at 10% 5%, rgba(16, 185, 129, 0.26), transparent 62%),
+    radial-gradient(900px 520px at 80% 0%, rgba(34, 197, 94, 0.20), transparent 58%),
+    linear-gradient(180deg, rgba(16, 185, 129, 0.10), rgba(255, 255, 255, 0.0) 45%),
+    #ffffff;
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-slate-200 bg-white shadow-sm;
+  }
+  .card-dark {
+    @apply dark:border-slate-800 dark:bg-slate-900/40;
+  }
+
+  /* Raised button -> pressed on hover/active (EBI-like) */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold transition;
+    @apply shadow-[0_10px_0_0_rgba(15,23,42,0.22)] translate-y-0;
+  }
+  .btn:hover {
+    @apply translate-y-[2px] shadow-[0_8px_0_0_rgba(15,23,42,0.22)];
+  }
+  .btn:active {
+    @apply translate-y-[6px] shadow-[0_4px_0_0_rgba(15,23,42,0.22)];
+  }
+
+  .btn-primary {
+    @apply bg-emerald-500 text-slate-950 hover:bg-emerald-400;
+  }
+  .btn-secondary {
+    @apply border border-slate-200 bg-white text-slate-900 hover:bg-slate-50;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700;
+    @apply hover:bg-slate-50;
+  }
+  .chip-active {
+    @apply border-emerald-400 bg-emerald-500 text-slate-950;
+    @apply hover:bg-emerald-400;
+  }
+}
