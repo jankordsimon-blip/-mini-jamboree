@@ -8,47 +8,54 @@ import { event } from "../config/event";
     <section class="mx-auto max-w-6xl px-6 py-16">
       <div class="grid gap-10 md:grid-cols-2 md:items-center">
         <div>
-          <p class="text-sm font-semibold tracking-widest text-slate-600">
-            SAVE THE DATE
-          </p>
+          <div class="flex flex-wrap gap-3">
+            <span class="chip chip-active">SAVE THE DATE</span>
+            <span class="chip">{event.date}</span>
+            <span class="chip">Münster</span>
+          </div>
 
-          <h1 class="mt-3 text-5xl font-bold tracking-tight">
+          <h1 class="mt-5 text-5xl font-extrabold tracking-tight">
             {event.name}
           </h1>
 
-          <div class="mt-6 h-px w-24 bg-slate-300"></div>
+          <div class="mt-6 h-px w-24 bg-slate-300 dark:bg-slate-700"></div>
 
-          <p class="mt-6 text-lg text-slate-700">
+          <p class="mt-6 text-lg text-slate-700 dark:text-slate-200">
             A 3-day meetup for iGEM teams with talks, poster sessions, networking,
             judging sessions, workshops, and panel discussions.
           </p>
 
-          <p class="mt-4 text-slate-600">
-            <span class="font-semibold text-slate-900">{event.date}</span>
-            <span class="px-2">·</span>
-            <span>{event.location}</span>
-          </p>
-
-          <div class="mt-8 flex flex-wrap gap-3">
-            <a class="rounded-lg bg-black px-5 py-3 text-white hover:bg-slate-800" href="/register">
-              Register interest
-            </a>
-            <a class="rounded-lg border px-5 py-3 hover:bg-slate-50" href="/program">
-              Program
-            </a>
-            <a class="rounded-lg border px-5 py-3 hover:bg-slate-50" href="/venue">
-              Venue & travel
-            </a>
+          <div class="mt-8 grid gap-3 sm:grid-cols-3">
+            <div class="card card-dark p-4">
+              <p class="text-xs font-semibold text-slate-500 dark:text-slate-400">Date</p>
+              <p class="mt-1 font-semibold text-slate-900 dark:text-white">{event.date}</p>
+            </div>
+            <div class="card card-dark p-4">
+              <p class="text-xs font-semibold text-slate-500 dark:text-slate-400">Location</p>
+              <p class="mt-1 font-semibold text-slate-900 dark:text-white">University of Münster</p>
+              <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Münster, Germany</p>
+            </div>
+            <div class="card card-dark p-4">
+              <p class="text-xs font-semibold text-slate-500 dark:text-slate-400">Fee</p>
+              <p class="mt-1 font-semibold text-slate-900 dark:text-white">TBA</p>
+              <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Announced with Indico</p>
+            </div>
           </div>
 
-          <p class="mt-4 text-sm text-slate-500">
-            Participation fee and official registration (Indico) will be announced soon.
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a class="btn btn-primary" href="/register">Register interest</a>
+            <a class="btn btn-secondary" href="/program">Program</a>
+            <a class="btn btn-secondary" href="/venue">Venue & travel</a>
+          </div>
+
+          <p class="mt-4 text-sm text-slate-500 dark:text-slate-400">
+            Official registration via Indico will be added later.
           </p>
         </div>
 
-        <div class="rounded-2xl border bg-slate-50 p-6">
+        <div class="card card-dark p-6">
           <h2 class="text-lg font-semibold">What to expect</h2>
-          <ul class="mt-4 space-y-2 text-slate-700">
+          <ul class="mt-4 space-y-2 text-slate-700 dark:text-slate-200">
             <li><span class="font-medium">Talks</span> by participating teams</li>
             <li><span class="font-medium">Poster session</span> & feedback</li>
             <li><span class="font-medium">Workshops</span> & skill building</li>
