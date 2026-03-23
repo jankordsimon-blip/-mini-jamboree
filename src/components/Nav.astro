@@ -9,21 +9,21 @@ const links = [
 ];
 ---
 
-<header class="border-b bg-white">
+<header class="border-b border-slate-800 bg-slate-900">
   <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-    <a href="/" class="font-semibold tracking-tight">
+    <a href="/" class="font-semibold tracking-tight text-white">
       {event.name}
     </a>
 
     <div class="flex items-center gap-4 text-sm">
       {links.map((l) => (
-        <a class="text-slate-700 hover:text-slate-900 hover:underline" href={l.href}>
+        <a class="text-slate-200 hover:text-white hover:underline" href={l.href}>
           {l.label}
         </a>
       ))}
 
       <a
-        class="ml-2 rounded-lg bg-black px-4 py-2 text-white hover:bg-slate-800"
+        class="ml-1 rounded-xl bg-emerald-500 px-4 py-2 font-semibold text-slate-950 hover:bg-emerald-400"
         href="/register"
       >
         Register
