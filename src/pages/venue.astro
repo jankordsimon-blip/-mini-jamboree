@@ -4,36 +4,50 @@ import { event } from "../config/event";
 ---
 
 <BaseLayout title="Venue & Travel">
-  <section class="mx-auto max-w-4xl px-6 py-16">
-    <h1 class="text-4xl font-bold tracking-tight">Venue & Travel</h1>
-    <p class="mt-4 text-slate-600">
+  <section class="mx-auto max-w-6xl px-6 py-16">
+    <h1 class="text-4xl font-extrabold tracking-tight">Venue & Travel</h1>
+    <p class="mt-4 max-w-3xl text-slate-700 dark:text-slate-200">
       The event takes place in Münster at the University of Münster. Exact rooms/buildings will be published soon.
     </p>
 
-    <div class="mt-10 space-y-6">
-      <div class="rounded-2xl border p-6">
-        <h2 class="text-xl font-semibold">Address (preliminary)</h2>
-        <p class="mt-3 text-slate-600">
+    <div class="mt-10 grid gap-4 md:grid-cols-2">
+      <div class="card card-dark p-6">
+        <h2 class="text-xl font-bold">Location</h2>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">
           {event.location}
         </p>
-        <p class="mt-3 text-sm text-slate-500">
-          We will share the final venue address and building information closer to the event.
+        <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">
+          Final address and building details will be shared closer to the event.
         </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a
+            class="btn btn-secondary"
+            href="https://www.google.com/maps/search/?api=1&query=M%C3%BCnster%20University"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open map
+          </a>
+          <a class="btn btn-secondary" href="/contact">
+            Ask a question
+          </a>
+        </div>
       </div>
 
-      <div class="rounded-2xl border p-6">
-        <h2 class="text-xl font-semibold">Getting to Münster</h2>
-        <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-600">
-          <li><span class="font-medium">Train:</span> Münster (Westf) Hbf</li>
-          <li><span class="font-medium">Airports:</span> Düsseldorf (DUS), Dortmund (DTM), Münster/Osnabrück (FMO)</li>
-          <li><span class="font-medium">Local transport:</span> buses, walking, and bike-friendly routes</li>
+      <div class="card card-dark p-6">
+        <h2 class="text-xl font-bold">Getting to Münster</h2>
+        <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-600 dark:text-slate-300">
+          <li><span class="font-semibold text-slate-900 dark:text-white">Train:</span> Münster (Westf) Hbf</li>
+          <li><span class="font-semibold text-slate-900 dark:text-white">Airports:</span> Düsseldorf (DUS), Dortmund (DTM), Münster/Osnabrück (FMO)</li>
+          <li><span class="font-semibold text-slate-900 dark:text-white">Local:</span> buses, walking, bike-friendly routes</li>
         </ul>
       </div>
 
-      <div class="rounded-2xl border p-6">
-        <h2 class="text-xl font-semibold">Accommodation</h2>
-        <p class="mt-3 text-slate-600">
-          A list of recommended hotels/hostels and suggested booking window will be published soon.
+      <div class="card card-dark p-6 md:col-span-2">
+        <h2 class="text-xl font-bold">Accommodation</h2>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">
+          We will publish recommendations for hotels/hostels and suggested booking windows soon.
         </p>
       </div>
     </div>

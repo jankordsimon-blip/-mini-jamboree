@@ -3,44 +3,51 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="FAQ">
-  <section class="mx-auto max-w-4xl px-6 py-16">
-    <h1 class="text-4xl font-bold tracking-tight">FAQ</h1>
+  <section class="mx-auto max-w-6xl px-6 py-16">
+    <h1 class="text-4xl font-extrabold tracking-tight">FAQ</h1>
+    <p class="mt-4 max-w-3xl text-slate-700 dark:text-slate-200">
+      Quick answers. If something is missing, contact the organizing team.
+    </p>
 
-    <div class="mt-10 space-y-8">
-      <div>
-        <h2 class="text-lg font-semibold">Who can attend?</h2>
-        <p class="mt-2 text-slate-600">
+    <div class="mt-10 grid gap-4">
+      <details class="card card-dark p-6">
+        <summary class="cursor-pointer text-lg font-bold">Who can attend?</summary>
+        <p class="mt-3 text-slate-600 dark:text-slate-300">
           This event is intended for iGEM teams.
         </p>
-      </div>
+      </details>
 
-      <div>
-        <h2 class="text-lg font-semibold">How do I register?</h2>
-        <p class="mt-2 text-slate-600">
-          For now, please submit an expression of interest via our registration form.
-          Official registration will be handled via Indico (link will be added later).
+      <details class="card card-dark p-6">
+        <summary class="cursor-pointer text-lg font-bold">How do I register?</summary>
+        <p class="mt-3 text-slate-600 dark:text-slate-300">
+          For now, please submit an expression of interest via our registration form. Official registration will be handled via Indico (link will be added later).
         </p>
-      </div>
+      </details>
 
-      <div>
-        <h2 class="text-lg font-semibold">Is there a participation fee?</h2>
-        <p class="mt-2 text-slate-600">
-          Yes, there will be a participation fee. The amount is TBA and will be announced with the Indico registration.
+      <details class="card card-dark p-6">
+        <summary class="cursor-pointer text-lg font-bold">Is there a participation fee?</summary>
+        <p class="mt-3 text-slate-600 dark:text-slate-300">
+          Yes. The participation fee is TBA and will be announced with Indico registration.
         </p>
-      </div>
+      </details>
 
-      <div>
-        <h2 class="text-lg font-semibold">Can we give a talk or present a poster?</h2>
-        <p class="mt-2 text-slate-600">
-          Yes. Information about formats, submission, and deadlines will be announced soon.
+      <details class="card card-dark p-6">
+        <summary class="cursor-pointer text-lg font-bold">Can we give a talk or present a poster?</summary>
+        <p class="mt-3 text-slate-600 dark:text-slate-300">
+          Yes. Details on formats, submission, and deadlines will be announced soon.
         </p>
-      </div>
+      </details>
 
-      <div>
-        <h2 class="text-lg font-semibold">Who do we contact for questions?</h2>
-        <p class="mt-2 text-slate-600">
-          Please use the contact page to reach the organizing team.
+      <details class="card card-dark p-6">
+        <summary class="cursor-pointer text-lg font-bold">Who do we contact for questions?</summary>
+        <p class="mt-3 text-slate-600 dark:text-slate-300">
+          Use the contact page to reach the organizing team.
         </p>
+      </details>
+
+      <div class="mt-2">
+        <a class="btn btn-secondary" href="/contact">Contact</a>
+        <a class="btn btn-primary ml-2" href="/register">Register interest</a>
       </div>
     </div>
   </section>
