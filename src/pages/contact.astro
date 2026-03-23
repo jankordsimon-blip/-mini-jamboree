@@ -4,28 +4,32 @@ import { event } from "../config/event";
 ---
 
 <BaseLayout title="Contact">
-  <section class="mx-auto max-w-4xl px-6 py-16">
-    <h1 class="text-4xl font-bold tracking-tight">Contact</h1>
+  <section class="mx-auto max-w-6xl px-6 py-16">
+    <h1 class="text-4xl font-extrabold tracking-tight">Contact</h1>
+    <p class="mt-4 max-w-3xl text-slate-700 dark:text-slate-200">
+      Reach out to the organizing team or follow iGEM Münster on social media.
+    </p>
 
-    <div class="mt-8 grid gap-6 md:grid-cols-2">
-      <div class="rounded-2xl border p-6">
-        <h2 class="text-xl font-semibold">Organizing team</h2>
-        <p class="mt-3 text-slate-600">
-          Questions about the event? Reach out via email:
+    <div class="mt-10 grid gap-4 md:grid-cols-2">
+      <div class="card card-dark p-6">
+        <h2 class="text-xl font-bold">Organizing team</h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-300">
+          Questions about the event? Contact us via email:
         </p>
-        <p class="mt-3">
-          <a class="underline hover:text-slate-900" href={"mailto:" + event.contactEmail}>
+
+        <p class="mt-4">
+          <a class="underline hover:text-slate-900 dark:hover:text-white" href={"mailto:" + event.contactEmail}>
             {event.contactEmail}
           </a>
         </p>
 
-        <div class="mt-6">
-          <h3 class="text-sm font-semibold text-slate-700">Socials</h3>
-          <ul class="mt-3 space-y-2 text-sm text-slate-600">
+        <div class="mt-8">
+          <h3 class="text-sm font-semibold text-slate-900 dark:text-white">Socials</h3>
+          <ul class="mt-3 space-y-2 text-sm text-slate-700 dark:text-slate-200">
             <li>
               Website:{" "}
               {event.socials.website ? (
-                <a class="underline hover:text-slate-900" href={event.socials.website} target="_blank" rel="noreferrer">
+                <a class="underline hover:text-slate-900 dark:hover:text-white" href={event.socials.website} target="_blank" rel="noreferrer">
                   iGEM Münster Website
                 </a>
               ) : (
@@ -35,7 +39,7 @@ import { event } from "../config/event";
             <li>
               Instagram:{" "}
               {event.socials.instagram ? (
-                <a class="underline hover:text-slate-900" href={event.socials.instagram} target="_blank" rel="noreferrer">
+                <a class="underline hover:text-slate-900 dark:hover:text-white" href={event.socials.instagram} target="_blank" rel="noreferrer">
                   @igem_muenster
                 </a>
               ) : (
@@ -45,7 +49,7 @@ import { event } from "../config/event";
             <li>
               GitHub:{" "}
               {event.socials.github ? (
-                <a class="underline hover:text-slate-900" href={event.socials.github} target="_blank" rel="noreferrer">
+                <a class="underline hover:text-slate-900 dark:hover:text-white" href={event.socials.github} target="_blank" rel="noreferrer">
                   iGEM Münster on GitHub
                 </a>
               ) : (
@@ -56,20 +60,18 @@ import { event } from "../config/event";
         </div>
       </div>
 
-      <div class="rounded-2xl border p-6">
-        <h2 class="text-xl font-semibold">Expression of interest</h2>
-        <p class="mt-3 text-slate-600">
+      <div class="card card-dark p-6">
+        <h2 class="text-xl font-bold">Expression of interest</h2>
+        <p class="mt-3 text-slate-600 dark:text-slate-300">
           Want to participate with your iGEM team? Leave your details and we will notify you when Indico registration opens.
         </p>
 
-        <a
-          class="mt-6 inline-block rounded-lg bg-black px-5 py-3 text-white hover:bg-slate-800"
-          href="/register"
-        >
-          I’m interested
-        </a>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a class="btn btn-primary" href="/register">Register interest</a>
+          <a class="btn btn-secondary" href="/faq">Read FAQ</a>
+        </div>
 
-        <p class="mt-4 text-sm text-slate-500">
+        <p class="mt-4 text-sm text-slate-500 dark:text-slate-400">
           Participation fee is TBA.
         </p>
       </div>
