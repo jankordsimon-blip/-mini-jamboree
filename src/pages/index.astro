@@ -1,22 +1,63 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { event } from "../config/event";
 ---
 
-<BaseLayout title="Mini Jamboree">
-  <main class="mx-auto max-w-4xl px-6 py-16">
-    <h1 class="text-5xl font-bold tracking-tight">
-      Mini Jamboree
-    </h1>
+<BaseLayout title={event.name}>
+  <main>
+    <section class="mx-auto max-w-6xl px-6 py-16">
+      <div class="grid gap-10 md:grid-cols-2 md:items-center">
+        <div>
+          <p class="text-sm font-semibold tracking-widest text-slate-600">
+            SAVE THE DATE
+          </p>
 
-    <p class="mt-4 text-lg text-slate-600">
-      If this text looks nicely styled and the button is black, Tailwind works.
-    </p>
+          <h1 class="mt-3 text-5xl font-bold tracking-tight">
+            {event.name}
+          </h1>
 
-    <a
-      href="#"
-      class="mt-8 inline-block rounded-lg bg-black px-5 py-3 text-white hover:bg-slate-800"
-    >
-      Register (Indico)
-    </a>
+          <div class="mt-6 h-px w-24 bg-slate-300"></div>
+
+          <p class="mt-6 text-lg text-slate-700">
+            A 3-day meetup for iGEM teams with talks, poster sessions, networking,
+            judging sessions, workshops, and panel discussions.
+          </p>
+
+          <p class="mt-4 text-slate-600">
+            <span class="font-semibold text-slate-900">{event.date}</span>
+            <span class="px-2">·</span>
+            <span>{event.location}</span>
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a class="rounded-lg bg-black px-5 py-3 text-white hover:bg-slate-800" href="/register">
+              Register interest
+            </a>
+            <a class="rounded-lg border px-5 py-3 hover:bg-slate-50" href="/program">
+              Program
+            </a>
+            <a class="rounded-lg border px-5 py-3 hover:bg-slate-50" href="/venue">
+              Venue & travel
+            </a>
+          </div>
+
+          <p class="mt-4 text-sm text-slate-500">
+            Participation fee and official registration (Indico) will be announced soon.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border bg-slate-50 p-6">
+          <h2 class="text-lg font-semibold">What to expect</h2>
+          <ul class="mt-4 space-y-2 text-slate-700">
+            <li><span class="font-medium">Talks</span> by participating teams</li>
+            <li><span class="font-medium">Poster session</span> & feedback</li>
+            <li><span class="font-medium">Workshops</span> & skill building</li>
+            <li><span class="font-medium">Panel discussions</span> with guests</li>
+            <li><span class="font-medium">Judging session</span> (details TBA)</li>
+            <li><span class="font-medium">Networking</span> with the community</li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 </BaseLayout>
