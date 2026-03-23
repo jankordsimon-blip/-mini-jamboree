@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import InterestForm from "../components/InterestForm";
 
 import teamsRaw from "../data/teams-europe.txt?raw";
+import { event } from "../config/event";
 
 const ENDPOINT_URL = "/api/interest";
 
@@ -13,14 +14,42 @@ const teams = teamsRaw
 ---
 
 <BaseLayout title="Register interest">
-  <section class="mx-auto max-w-5xl px-6 py-16">
-    <h1 class="text-4xl font-bold tracking-tight">Expression of Interest</h1>
-    <p class="mt-4 max-w-2xl text-slate-600">
-      Leave your details here. We’ll notify you when Indico registration opens.
+  <section class="mx-auto max-w-6xl px-6 py-16">
+    <h1 class="text-4xl font-extrabold tracking-tight">Expression of Interest</h1>
+    <p class="mt-4 max-w-3xl text-slate-700 dark:text-slate-200">
+      Leave your details here. We’ll notify you when official registration via Indico opens.
     </p>
 
-    <div class="mt-10">
-      <InterestForm endpointUrl={ENDPOINT_URL} teams={teams} client:load />
+    <div class="mt-10 grid gap-6 lg:grid-cols-5">
+      <!-- Info column -->
+      <div class="lg:col-span-2">
+        <div class="card card-dark p-6">
+          <h2 class="text-xl font-bold">What happens next?</h2>
+          <ul class="mt-4 list-disc space-y-2 pl-5 text-slate-600 dark:text-slate-300">
+            <li>We collect your details to coordinate the event and share updates.</li>
+            <li>Participation fee is <span class="font-semibold text-slate-900 dark:text-white">TBA</span>.</li>
+            <li>Official registration will be handled via <span class="font-semibold text-slate-900 dark:text-white">Indico</span> (link will be added later).</li>
+          </ul>
+
+          <div class="mt-6 h-px w-full bg-slate-200 dark:bg-slate-800"></div>
+
+          <h3 class="mt-6 text-sm font-semibold text-slate-900 dark:text-white">Event</h3>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            <span class="font-semibold text-slate-900 dark:text-white">{event.date}</span>
+            <span class="px-2">·</span>
+            <span>{event.location}</span>
+          </p>
+
+          <p class="mt-4 text-xs text-slate-500 dark:text-slate-400">
+            By submitting, you agree that we store your details to contact you about this event.
+          </p>
+        </div>
+      </div>
+
+      <!-- Form column -->
+      <div class="lg:col-span-3">
+        <InterestForm endpointUrl={ENDPOINT_URL} teams={teams} client:load />
+      </div>
     </div>
   </section>
 </BaseLayout>
