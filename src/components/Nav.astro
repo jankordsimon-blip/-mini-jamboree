@@ -1,41 +1,33 @@
 ---
 import { event } from "../config/event";
 
-// Base-Pfad für GitHub Pages
-const base = import.meta.env.BASE_URL;
-
 const links = [
-  { href: `${base}/program`, label: "Program" },
-  { href: `${base}/venue`, label: "Venue" },
-  { href: `${base}/faq`, label: "FAQ" },
-  { href: `${base}/contact`, label: "Contact" },
+  { href: "/program", label: "Program" },
+  { href: "/venue", label: "Venue" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/contact", label: "Contact" },
 ];
 ---
 
 <header class="border-b border-slate-800 bg-slate-900">
   <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-    
-    <!-- Logo / Home -->
-    <a href={`${base}/`} class="font-semibold tracking-tight text-white">
+    <a href="/" class="font-semibold tracking-tight text-white">
       {event.name}
     </a>
 
     <div class="flex items-center gap-4 text-sm">
-      
       {links.map((l) => (
         <a class="text-slate-200 hover:text-white hover:underline" href={l.href}>
           {l.label}
         </a>
       ))}
 
-      <!-- Register Button -->
       <a
         class="ml-1 rounded-xl bg-emerald-500 px-4 py-2 font-semibold text-slate-950 hover:bg-emerald-400"
-        href={`${base}/register`}
+        href="/register"
       >
         Register
       </a>
-
     </div>
   </nav>
 </header>

@@ -2,8 +2,6 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { event } from "../config/event";
 import heroImage from "../assets/burgen-schloesser-parks-muenster-universitaet-muenster-c-dagmar-schwelle.jpg";
-
-const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title={event.name}>
@@ -36,9 +34,9 @@ const base = import.meta.env.BASE_URL;
           </p>
 
           <div class="mt-8 flex flex-wrap gap-3">
-            <a class="btn btn-primary" href={`${base}/register`}>Register interest</a>
-            <a class="btn btn-secondary bg-white/85 backdrop-blur" href={`${base}/program`}>Program</a>
-            <a class="btn btn-secondary bg-white/85 backdrop-blur" href={`${base}/venue`}>Venue & travel</a>
+            <a class="btn btn-primary" href="/register">Register interest</a>
+            <a class="btn btn-secondary bg-white/85 backdrop-blur" href="/program">Program</a>
+            <a class="btn btn-secondary bg-white/85 backdrop-blur" href="/venue">Venue & travel</a>
           </div>
 
           <p class="mt-5 text-sm text-white/80">

@@ -1,9 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { event } from "../config/event";
-
-// 👉 wichtig für GitHub Pages
-const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Contact">
@@ -14,7 +11,6 @@ const base = import.meta.env.BASE_URL;
     </p>
 
     <div class="mt-10 grid gap-4 md:grid-cols-2">
-      
       <div class="card card-dark p-6">
         <h2 class="text-xl font-bold">Organizing team</h2>
         <p class="mt-3 text-slate-600 dark:text-slate-300">
@@ -70,17 +66,15 @@ const base = import.meta.env.BASE_URL;
           Want to participate with your iGEM team? Leave your details and we will notify you when Indico registration opens.
         </p>
 
-        <!-- ✅ FIXED BUTTONS -->
         <div class="mt-6 flex flex-wrap gap-3">
-          <a class="btn btn-primary" href={`${base}/register`}>Register interest</a>
-          <a class="btn btn-secondary" href={`${base}/faq`}>Read FAQ</a>
+          <a class="btn btn-primary" href="/register">Register interest</a>
+          <a class="btn btn-secondary" href="/faq">Read FAQ</a>
         </div>
 
         <p class="mt-4 text-sm text-slate-500 dark:text-slate-400">
           Participation fee is TBA.
         </p>
       </div>
-
     </div>
   </section>
 </BaseLayout>
