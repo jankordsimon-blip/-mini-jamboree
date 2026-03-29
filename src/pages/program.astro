@@ -6,7 +6,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <section class="mx-auto max-w-6xl px-6 py-16">
     <h1 class="text-4xl font-extrabold tracking-tight">Program</h1>
     <p class="mt-4 max-w-3xl text-slate-700 dark:text-slate-200">
-      The detailed timetable will be published soon. Explore the planned formats below.
+      The detailed timetable will be refined over time. Explore the planned formats below and scroll down for the current event timeline.
     </p>
 
     <div class="mt-8 flex flex-wrap gap-3">
@@ -16,49 +16,273 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <a class="chip" href="#panel">Panel</a>
       <a class="chip" href="#judging">Judging</a>
       <a class="chip" href="#networking">Networking</a>
+      <a class="chip chip-active" href="#timeline">Timeline</a>
     </div>
 
     <div class="mt-10 grid gap-4 md:grid-cols-2">
       <div id="talks" class="card card-dark p-6">
         <h2 class="text-xl font-bold">Team talks</h2>
         <p class="mt-2 text-slate-600 dark:text-slate-300">
-          Short presentations by participating iGEM teams.
+          Short presentations by participating iGEM teams, including time for questions and technical transitions.
         </p>
       </div>
 
       <div id="posters" class="card card-dark p-6">
         <h2 class="text-xl font-bold">Poster session</h2>
         <p class="mt-2 text-slate-600 dark:text-slate-300">
-          Share your project and receive structured feedback.
+          Present your project in an interactive poster format and receive direct feedback from peers and guests.
         </p>
       </div>
 
       <div id="workshops" class="card card-dark p-6">
         <h2 class="text-xl font-bold">Workshops</h2>
         <p class="mt-2 text-slate-600 dark:text-slate-300">
-          Hands-on sessions on key iGEM-related topics.
+          Hands-on sessions focused on useful iGEM-related skills and practical topics.
         </p>
       </div>
 
       <div id="panel" class="card card-dark p-6">
         <h2 class="text-xl font-bold">Panel discussions</h2>
         <p class="mt-2 text-slate-600 dark:text-slate-300">
-          Interactive discussions with invited guests.
+          Interactive discussions with invited guests on science, innovation, judging, and the broader iGEM experience.
         </p>
       </div>
 
       <div id="judging" class="card card-dark p-6">
         <h2 class="text-xl font-bold">Judging session</h2>
         <p class="mt-2 text-slate-600 dark:text-slate-300">
-          A judging/feedback format (details and criteria TBA).
+          A dedicated judging and feedback format. Final details and criteria will be announced later.
         </p>
       </div>
 
       <div id="networking" class="card card-dark p-6">
         <h2 class="text-xl font-bold">Networking</h2>
         <p class="mt-2 text-slate-600 dark:text-slate-300">
-          Meet teams and connect with the community.
+          Meet other teams, speakers, and guests in a relaxed setting throughout the event.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="timeline" class="mx-auto max-w-5xl px-6 pb-16">
+    <div class="card card-dark p-6 md:p-8">
+      <div class="mb-8">
+        <p class="text-sm font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">
+          Event timeline
+        </p>
+        <h2 class="mt-2 text-3xl font-extrabold tracking-tight">Current Schedule Overview</h2>
+        <p class="mt-3 max-w-3xl text-slate-600 dark:text-slate-300">
+          This timeline gives a structured overview of the planned flow of the weekend. Times and individual sessions may still be adjusted.
+        </p>
+      </div>
+
+      <div class="space-y-6">
+        <!-- Friday -->
+        <details open class="group rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900/50">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">
+                Friday
+              </p>
+              <h3 class="text-xl font-bold">July 10</h3>
+            </div>
+            <span class="text-sm font-medium text-slate-500 transition group-open:rotate-180 dark:text-slate-400">
+              ▼
+            </span>
+          </summary>
+
+          <div class="relative mt-6 pl-8">
+            <div class="absolute left-[11px] top-0 h-full w-px bg-slate-200 dark:bg-slate-700"></div>
+
+            <div class="space-y-8">
+              <div class="relative">
+                <div class="absolute left-[-32px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs text-slate-950 shadow-sm">
+                  ⏱
+                </div>
+                <p class="font-semibold text-slate-900 dark:text-white">From 16:00</p>
+                <p class="mt-1 text-slate-600 dark:text-slate-300">Arrival & Check-in</p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute left-[-32px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs text-slate-950 shadow-sm">
+                  🎤
+                </div>
+                <p class="font-semibold text-slate-900 dark:text-white">17:00</p>
+                <p class="mt-1 text-slate-600 dark:text-slate-300">
+                  Welcome Session, Opening Talk by Prof. Dr. Jochen Schmid, and an overview of the program and logistics
+                </p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute left-[-32px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs text-slate-950 shadow-sm">
+                  🌿
+                </div>
+                <p class="font-semibold text-slate-900 dark:text-white">18:00</p>
+                <p class="mt-1 text-slate-600 dark:text-slate-300">
+                  Networking & Icebreaker Activities in the park (or indoors if needed), followed by dinner
+                </p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute left-[-32px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs text-slate-950 shadow-sm">
+                  🌃
+                </div>
+                <p class="font-semibold text-slate-900 dark:text-white">From 20:00 / 21:00</p>
+                <p class="mt-1 text-slate-600 dark:text-slate-300">
+                  Explore Münster and continue the evening informally in the city
+                </p>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Saturday -->
+        <details open class="group rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900/50">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">
+                Saturday
+              </p>
+              <h3 class="text-xl font-bold">July 11</h3>
+            </div>
+            <span class="text-sm font-medium text-slate-500 transition group-open:rotate-180 dark:text-slate-400">
+              ▼
+            </span>
+          </summary>
+
+          <div class="relative mt-6 pl-8">
+            <div class="absolute left-[11px] top-0 h-full w-px bg-slate-200 dark:bg-slate-700"></div>
+
+            <div class="space-y-8">
+              <div class="relative">
+                <div class="absolute left-[-32px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs text-slate-950 shadow-sm">☀️</div>
+                <p class="font-semibold text-slate-900 dark:text-white">08:30</p>
+                <p class="mt-1 text-slate-600 dark:text-slate-300">Arrival</p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute left-[-32px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs text-slate-950 shadow-sm">📋</div>
+                <p class="font-semibold text-slate-900 dark:text-white">09:00</p>
+                <p class="mt-1 text-slate-600 dark:text-slate-300">
+                  Welcome, overview of the day, and guest welcome (e.g. iGEM representative)
+                </p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute left-[-32px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs text-slate-950 shadow-sm">🎙️</div>
+                <p class="font-semibold text-slate-900 dark:text-white">09:45</p>
+                <p class="mt-1 text-slate-600 dark:text-slate-300">Speaker Session 1 (20 min + Q&A)</p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute left-[-32px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs text-slate-950 shadow-sm">🎙️</div>
+                <p class="font-semibold text-slate-900 dark:text-white">10:15</p>
+                <p class="mt-1 text-slate-600 dark:text-slate-300">Speaker Session 2 (20 min + Q&A)</p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute left-[-32px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs text-slate-950 shadow-sm">💬</div>
+                <p class="font-semibold text-slate-900 dark:text-white">10:45</p>
+                <p class="mt-1 text-slate-600 dark:text-slate-300">Judging Panel Discussion</p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute left-[-32px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs text-slate-950 shadow-sm">☕</div>
+                <p class="font-semibold text-slate-900 dark:text-white">11:15</p>
+                <p class="mt-1 text-slate-600 dark:text-slate-300">Coffee Break</p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute left-[-32px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs text-slate-950 shadow-sm">🧪</div>
+                <p class="font-semibold text-slate-900 dark:text-white">11:45</p>
+                <p class="mt-1 text-slate-600 dark:text-slate-300">Team Presentations — Block I</p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute left-[-32px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs text-slate-950 shadow-sm">🍽️</div>
+                <p class="font-semibold text-slate-900 dark:text-white">13:15</p>
+                <p class="mt-1 text-slate-600 dark:text-slate-300">Lunch Break</p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute left-[-32px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs text-slate-950 shadow-sm">🧪</div>
+                <p class="font-semibold text-slate-900 dark:text-white">14:00</p>
+                <p class="mt-1 text-slate-600 dark:text-slate-300">Team Presentations — Block II</p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute left-[-32px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs text-slate-950 shadow-sm">☕</div>
+                <p class="font-semibold text-slate-900 dark:text-white">15:30</p>
+                <p class="mt-1 text-slate-600 dark:text-slate-300">Coffee Break</p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute left-[-32px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs text-slate-950 shadow-sm">🛠️</div>
+                <p class="font-semibold text-slate-900 dark:text-white">15:45</p>
+                <p class="mt-1 text-slate-600 dark:text-slate-300">Workshops</p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute left-[-32px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs text-slate-950 shadow-sm">🧾</div>
+                <p class="font-semibold text-slate-900 dark:text-white">17:00</p>
+                <p class="mt-1 text-slate-600 dark:text-slate-300">Poster Session</p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute left-[-32px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs text-slate-950 shadow-sm">🍽️</div>
+                <p class="font-semibold text-slate-900 dark:text-white">18:00</p>
+                <p class="mt-1 text-slate-600 dark:text-slate-300">Closing & Dinner</p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute left-[-32px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs text-slate-950 shadow-sm">🍻</div>
+                <p class="font-semibold text-slate-900 dark:text-white">20:00</p>
+                <p class="mt-1 text-slate-600 dark:text-slate-300">Pub Quiz & Social Evening</p>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Sunday -->
+        <details open class="group rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900/50">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">
+                Sunday
+              </p>
+              <h3 class="text-xl font-bold">July 12</h3>
+            </div>
+            <span class="text-sm font-medium text-slate-500 transition group-open:rotate-180 dark:text-slate-400">
+              ▼
+            </span>
+          </summary>
+
+          <div class="relative mt-6 pl-8">
+            <div class="absolute left-[11px] top-0 h-full w-px bg-slate-200 dark:bg-slate-700"></div>
+
+            <div class="space-y-8">
+              <div class="relative">
+                <div class="absolute left-[-32px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs text-slate-950 shadow-sm">🥐</div>
+                <p class="font-semibold text-slate-900 dark:text-white">10:00</p>
+                <p class="mt-1 text-slate-600 dark:text-slate-300">Breakfast</p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute left-[-32px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs text-slate-950 shadow-sm">🏆</div>
+                <p class="font-semibold text-slate-900 dark:text-white">11:00</p>
+                <p class="mt-1 text-slate-600 dark:text-slate-300">
+                  Final Session: Judges’ Remarks, Awards Ceremony, and Feedback
+                </p>
+              </div>
+
+              <div class="relative">
+                <div class="absolute left-[-32px] top-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs text-slate-950 shadow-sm">👋</div>
+                <p class="font-semibold text-slate-900 dark:text-white">From 12:30</p>
+                <p class="mt-1 text-slate-600 dark:text-slate-300">Departure</p>
+              </div>
+            </div>
+          </div>
+        </details>
       </div>
     </div>
   </section>
