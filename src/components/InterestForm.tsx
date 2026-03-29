@@ -68,10 +68,16 @@ export default function InterestForm({ endpointUrl, teams }: Props) {
   if (status === "success") {
     return (
       <div className="rounded-2xl border bg-white p-6">
-        <h2 className="text-xl font-semibold">Thanks!</h2>
+        <h2 className="text-xl font-semibold">You're on the list!</h2>
+
         <p className="mt-2 text-slate-600">
-          Your details were submitted. We’ll contact you with updates.
+          Thanks for your interest. We’ll notify you as soon as official registration opens.
         </p>
+
+        <p className="mt-3 font-semibold text-slate-900">
+          Important: Your participation is only confirmed after official registration via Indico. You will receive an email once registration opens.
+        </p>
+
         <button
           className="mt-6 rounded-lg border px-4 py-2 hover:bg-slate-50"
           onClick={() => {
