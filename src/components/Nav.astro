@@ -1,5 +1,6 @@
 ---
 import logo from "../assets/logo.png";
+import { event } from "../config/event";
 
 const links = [
   { href: "/program", label: "Program" },
@@ -11,12 +12,8 @@ const links = [
 
 <header class="border-b border-slate-800 bg-slate-900">
   <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-    <a href="/" class="flex items-center">
-      <img
-        src={logo.src}
-        alt="iGEM Münster Junior Jam"
-        class="h-10 w-auto"
-      />
+    <a href="/" class="font-semibold tracking-tight text-white">
+      {event.name}
     </a>
 
     <div class="flex items-center gap-4 text-sm">
@@ -30,7 +27,7 @@ const links = [
         class="ml-1 rounded-xl bg-emerald-500 px-4 py-2 font-semibold text-slate-950 hover:bg-emerald-400"
         href="/register"
       >
-        Interested
+        Register interest
       </a>
     </div>
   </nav>
