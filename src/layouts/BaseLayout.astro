@@ -28,6 +28,37 @@ const { title = "Mini Jamboree" } = Astro.props;
     <meta name="twitter:title" content="iGEM Münster Junior Jam 2026" />
     <meta name="twitter:description" content="International iGEM meetup in Münster with talks, workshops and networking." />
 
+    <script type="application/ld+json">
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "iGEM Münster Junior Jam 2026",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "startDate": "2026-07-10",
+    "endDate": "2026-07-12",
+    "location": {
+      "@type": "Place",
+      "name": "University of Münster",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Münster",
+        "addressCountry": "DE"
+      }
+    },
+    "image": [
+      "https://igem-muenster-juniorjam.com"
+    ],
+    "description": "The iGEM Münster (iGEM Muenster) Junior Jam 2026 is a 3-day international meetup with talks, workshops, poster sessions and networking for iGEM teams.",
+    "organizer": {
+      "@type": "Organization",
+      "name": "iGEM Münster",
+      "url": "https://igem-muenster-juniorjam.com"
+    },
+    "url": "https://igem-muenster-juniorjam.com"
+  })}
+</script>
+
     <!-- Inter Variable (iGEM-like) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
