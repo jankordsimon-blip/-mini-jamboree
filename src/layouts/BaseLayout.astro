@@ -11,7 +11,22 @@ const { title = "Mini Jamboree" } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
+
+    <!-- SEO -->
+    <title>{title} | iGEM Münster Junior Jam 2026</title>
+    <meta name="description" content="Join the iGEM Münster Junior Jam 2026 – a 3-day international meetup with talks, workshops, poster sessions and networking for iGEM teams." />
+    <link rel="canonical" href="https://igem-muenster-juniorjam.com" />
+
+    <!-- Open Graph (for sharing & SEO) -->
+    <meta property="og:title" content="iGEM Münster Junior Jam 2026" />
+    <meta property="og:description" content="International iGEM meetup in Münster with talks, workshops and networking." />
+    <meta property="og:url" content="https://igem-muenster-juniorjam.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="iGEM Münster Junior Jam 2026" />
+    <meta name="twitter:description" content="International iGEM meetup in Münster with talks, workshops and networking." />
 
     <!-- Inter Variable (iGEM-like) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
