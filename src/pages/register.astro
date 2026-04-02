@@ -48,6 +48,11 @@ const teams = teamsRaw
 
       <!-- Form column -->
       <div class="lg:col-span-3">
+
+        <p class="mb-6 text-lg font-semibold text-slate-900 dark:text-white">
+          If only one person registers, please include the total number of interested team members in parentheses.
+        </p>
+
         <InterestForm endpointUrl={ENDPOINT_URL} teams={teams} client:load />
       </div>
     </div>
