@@ -43,13 +43,85 @@ import { event } from "../config/event";
           <li><span class="font-semibold text-slate-900 dark:text-white">Local:</span> buses, walking, bike-friendly routes</li>
         </ul>
       </div>
-
-      <div class="card card-dark p-6 md:col-span-2">
-        <h2 class="text-xl font-bold">Accommodation</h2>
-        <p class="mt-2 text-slate-600 dark:text-slate-300">
-          We will publish recommendations for hotels/hostels and suggested booking windows soon.
-        </p>
-      </div>
     </div>
+
+    <!-- Accommodation Section -->
+    <section class="mt-16">
+      <h2 class="text-2xl font-bold">Accommodation</h2>
+      <p class="mt-2 text-slate-600 dark:text-slate-300">
+        Here are some recommended places to stay in Münster, sorted by price range.
+      </p>
+
+      <!-- ✅ Optional Tip -->
+      <p class="mt-4 text-sm text-slate-500">
+        💡 Tip: Münster is compact — most locations are reachable by bike or public transport within minutes.
+      </p>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+
+        <!-- € Budget -->
+        <div class="card card-dark p-6">
+          <h3 class="text-lg font-semibold">€ Budget</h3>
+          <ul class="mt-4 space-y-3 text-sm text-slate-700 dark:text-slate-300">
+            <li>
+              🛏️ <a href="https://h-ostel.de/" target="_blank" class="underline hover:text-white">H.ostel Münster</a><br />
+              ~21€/night · 10-bed dorm · very central (Marienplatz)
+            </li>
+            <li>
+              🛏️ <a href="https://sleep-station.de/" target="_blank" class="underline hover:text-white">Sleep Station Hostel</a><br />
+              ~28€/night · 6-bed dorm
+            </li>
+          </ul>
+        </div>
+
+        <!-- €€ Mid -->
+        <div class="card card-dark p-6">
+          <h3 class="text-lg font-semibold">€€ Mid-range</h3>
+          <ul class="mt-4 space-y-3 text-sm text-slate-700 dark:text-slate-300">
+            <li>
+              🏡 <a href="https://www.jgh-muenster.de/" target="_blank" class="underline hover:text-white">Jugendgästehaus Aasee</a><br />
+              ~57€/night · 4-bed room · breakfast included
+            </li>
+            <li>
+              🏨 <a href="https://all.accor.com/" target="_blank" class="underline hover:text-white">Ibis Budget Münster City</a><br />
+              ~57€/night · double room (~28.5€/person)
+            </li>
+            <li>
+              🏨 <a href="https://www.hotelbb.de/" target="_blank" class="underline hover:text-white">B&B Hotel Münster Hafen</a><br />
+              ~64€/night · double room (~32€/person)
+            </li>
+            <li>
+              🏨 <a href="https://www.hotel-windhorst.de/" target="_blank" class="underline hover:text-white">Hotel Windhorst</a><br />
+              ~71€/night · double room (~35.5€/person)
+            </li>
+            <li>
+              🏨 <a href="https://all.accor.com/" target="_blank" class="underline hover:text-white">Ibis Münster City</a><br />
+              ~75€/night · double room (~37.5€/person)
+            </li>
+          </ul>
+        </div>
+
+        <!-- €€€ Premium -->
+        <div class="card card-dark p-6">
+          <h3 class="text-lg font-semibold">€€€ Premium</h3>
+          <ul class="mt-4 space-y-3 text-sm text-slate-700 dark:text-slate-300">
+            <li>
+              🏨 <a href="https://www.hotel-conti-muenster.de/" target="_blank" class="underline hover:text-white">Hotel Conti am Hauptbahnhof</a><br />
+              ~107€/night · single room
+            </li>
+            <li>
+              🏨 <a href="https://www.tripinn-hotels.com/" target="_blank" class="underline hover:text-white">Trip Inn Hotel City Münster</a><br />
+              ~108€/night · single room
+            </li>
+            <li>
+              🏨 <a href="https://www.stadthotel-muenster.de/" target="_blank" class="underline hover:text-white">Stadthotel Münster</a><br />
+              ~137€/night · single room
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
   </section>
 </BaseLayout>
