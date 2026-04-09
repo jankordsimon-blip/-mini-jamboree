@@ -5,6 +5,7 @@ type NewsItem = {
   title: string;
   text: string;
   image?: string;
+  credit?: string;
 };
 
 type Props = {
@@ -61,14 +62,20 @@ export default function NewsFeed({ items }: Props) {
 
       <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
         {item.image && (
-          <div className="h-72 w-full overflow-hidden md:h-96">
-            <img
-              src={item.image}
-              alt={item.title}
-              className="h-full w-full object-cover"
-            />
-          </div>
-        )}
+  <div className="relative h-72 w-full overflow-hidden md:h-96">
+    <img
+      src={item.image}
+      alt={item.title}
+      className="h-full w-full object-cover"
+    />
+
+    {item.credit && (
+      <div className="pointer-events-none absolute bottom-3 left-3 text-xs text-white/70 backdrop-blur-sm bg-black/20 px-2 py-1 rounded-md">
+        Photo: {item.credit}
+      </div>
+    )}
+  </div>
+ )}
 
         <div className="p-6 md:p-8">
           <p className="text-sm font-semibold text-emerald-700">{item.date}</p>
